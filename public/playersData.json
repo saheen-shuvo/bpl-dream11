@@ -1,0 +1,124 @@
+{
+  "players": [
+    {
+      "playerId": 1,
+      "name": "Virat Kohli",
+      "country": "India",
+      "image": "https://i.ibb.co.com/yYJLvDp/virat.jpg",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm medium",
+      "biddingPrice": "20000"
+    },
+    {
+      "playerId": 2,
+      "name": "Steve Smith",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/HBf2JTh/3ad3d5ed-82e0-4894-95c2-d9f29bbd90ae.jpg",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Leg spin",
+      "biddingPrice": "30000"
+    },
+    {
+      "playerId": 3,
+      "name": "Kane Williamson",
+      "country": "New Zealand",
+      "image": "https://i.ibb.co.com/TwtwW5S/Kane-Williamson-Photo.jpg",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Off spin",
+      "biddingPrice": "60000"
+    },
+    {
+      "playerId": 4,
+      "name": "Shakib Al Hasan",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/HNWY2MK/Shakib-Al-Hassan.jpg",
+      "role": "All-rounder",
+      "battingType": "Left-hand bat",
+      "bowlingType": "Left-arm-spin",
+      "biddingPrice": "50000"
+    },
+    {
+      "playerId": 5,
+      "name": "Babar Azam",
+      "country": "Pakistan",
+      "image": "https://i.ibb.co.com/n3Lh79Q/Baber-Azma.jpg",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Off spin",
+      "biddingPrice": "10000"
+    },
+    {
+      "playerId": 6,
+      "name": "Rashid Khan",
+      "country": "Afghanistan",
+      "image": "https://i.ibb.co.com/SNbmC0N/Rashid-Khan-World-cup-photo.jpg",
+      "role": "Bowler",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Leg spin",
+      "biddingPrice": "55000"
+    },
+    {
+      "playerId": 7,
+      "name": "Pat Cummins",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/cFzJZDw/Pat-Cummins-Pictures.jpg",
+      "role": "Bowler",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm fast",
+      "biddingPrice": "35000"
+    },
+    {
+      "playerId": 8,
+      "name": "Trent Boult",
+      "country": "New Zealand",
+      "image": "https://i.ibb.co.com/cDHBb3J/Big-strike-for-New-Zealand-Trent-Boult-who.jpg",
+      "role": "Bowler",
+      "battingType": "Left-hand bat",
+      "bowlingType": "Left-arm fast",
+      "biddingPrice": "25000"
+    },
+    {
+      "playerId": 9,
+      "name": "Jos Buttler",
+      "country": "England",
+      "image": "https://i.ibb.co.com/b2y1J1g/Josh-Buttler.jpg",
+      "role": "Wicketkeeper Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "N/A",
+      "biddingPrice": "72000"
+    },
+    {
+      "playerId": 10,
+      "name": "David Warner",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/6t1K6dt/Former-Australia-Captain-On-David-Warner-s-Huge-BBL-Pay-Hike-It-Creates-a-Headache-a-Parti.jpg",
+      "role": "Batsman",
+      "battingType": "Left-hand bat",
+      "bowlingType": "Right-arm leg break",
+      "biddingPrice": "48000"
+    },
+    {
+      "playerId": 11,
+      "name": "Ben Stokes",
+      "country": "England",
+      "image": "https://i.ibb.co.com/LxKmLs9/Cricket-World-Cup-2019-Ben-Stokes-reflects-on-his-sensational-form-as-England-flounder-Sport360-News.jpg",
+      "role": "All-rounder",
+      "battingType": "Left-hand bat",
+      "bowlingType": "Right-arm fast-medium",
+      "biddingPrice": "43000"
+    },
+    {
+      "playerId": 12,
+      "name": "Hardik Pandya",
+      "country": "India",
+      "image": "https://i.ibb.co.com/qgmbSkc/National-duty.jpg",
+      "role": "All-rounder",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm fast",
+      "biddingPrice": "56000"
+    }
+  ]
+}
