@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 
 const Cards = ({addPlayerToSelected}) => {
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {
-    fetch("../../public/playersData.json")
+    fetch("/playersData.json")
       .then((res) => res.json())
       .then((data) => setPlayers(data.players));
   }, []);
@@ -42,5 +43,9 @@ const Cards = ({addPlayerToSelected}) => {
     </div>
   );
 };
+
+Cards.propTypes ={
+  addPlayerToSelected: PropTypes.func
+}
 
 export default Cards;

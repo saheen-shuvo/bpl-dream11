@@ -1,4 +1,4 @@
-const Navbar = () => {
+const Navbar = ({price}) => {
   return (
     <div className="flex justify-between items-center mt-2 lg:mt-6 mx-2 lg:mx-20">
       <div className="dropdown block md:hidden lg:hidden">
@@ -63,8 +63,7 @@ const Navbar = () => {
             <a>Schedules</a>
           </li>
         </ul>
-        <a className="btn btn-sm lg:btn-md bg-transparent border-2 text-base">
-          Coin <img src="../../public/images/coin.png" alt="" />
+        <a className="btn btn-sm lg:btn-md bg-transparent border-2 text-base">{price} Coin <img src="../../public/images/coin.png" alt="" />
         </a>
       </div>
     </div>
