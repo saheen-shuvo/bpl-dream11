@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-export default function Selected({ selectedPlayers, handleDelete }) {
+export default function Selected({ selectedPlayers, handleDelete, setTabs, handleIsActiveState}) {
   return (
     <div className="mt-6 mx-2 lg:mx-20">
-      Selected Players: {selectedPlayers.length}
+      <h1 className="mt-[-55px] text-sm lg:text-xl font-semibold mb-10">Selected Players: ({selectedPlayers.length}/6)</h1>
       <div>
         {selectedPlayers.map((player, index) => (
           <div
@@ -18,6 +18,7 @@ export default function Selected({ selectedPlayers, handleDelete }) {
               <div>
                 <h4 className="text-xl font-semibold">{player.name}</h4>
                 <h4 className="text-sm">{player.role}</h4>
+                <h4 className="text-sm">{player.biddingPrice} $</h4>
               </div>
             </div>
             <div className="mr-8">
@@ -27,7 +28,7 @@ export default function Selected({ selectedPlayers, handleDelete }) {
             </div>
           </div>
         ))}
-        <button className="bg-green-900 mt-5 py-3 px-4 rounded-xl text-white outline outline-2 outline-green-900 outline-offset-4 font-semibold">
+        <button onClick={() => {setTabs('AvailablePlayer'); handleIsActiveState('card')}} className="bg-green-900 mt-10 py-3 px-4 rounded-xl text-white outline outline-2 outline-green-900 outline-offset-4 font-semibold">
           Add More Player
         </button>
       </div>
@@ -38,4 +39,6 @@ export default function Selected({ selectedPlayers, handleDelete }) {
 Selected.propTypes = {
   selectedPlayers: PropTypes.func,
   handleDelete: PropTypes.func,
+  setTabs: PropTypes.func,
+  handleIsActiveState: PropTypes.func,
 };

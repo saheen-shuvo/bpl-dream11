@@ -12,6 +12,7 @@ const Cards = ({addPlayerToSelected}) => {
 
   return (
     <div id="available-section">
+      <h1 className="mx-2 lg:mx-20 font-semibold text-sm lg:text-2xl mt-[-35px] mb-10">Available Players</h1>
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6 mx-2 lg:mx-20">
       {players.map((player) => (
         <div key={player.id} className="card bg-base-100 shadow-xl border-2">

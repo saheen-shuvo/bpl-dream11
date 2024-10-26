@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import CardsContainer from "./components/CardsContainer";
 import Selected from "./components/Selected";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const [isActive, setIsActive] = useState({
@@ -28,11 +30,22 @@ const App = () => {
 
   const [selectedPlayers, setSelectedPlayers] = useState([]);
   const [deletedPlayer, setDeletedPlayer] = useState([]);
-  const [price, setPrice] = useState([parseInt(80000)]);
+  const [price, setPrice] = useState([parseInt(0)]);
+  const [tabs, setTabs] = useState("AvailablePlayer");
 
-  const handleClaimCredits = (cre) => {
-    setPrice(parseInt(price) + parseInt(cre));
-    alert("Congratulations, You Got Some Credits!");
+  const handleClaimCredits = () => {
+    setPrice(parseInt(price) + parseInt(80000));
+    toast.success("Congratulations, You Got Some Credits!", {
+      position: "top-center",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
 
   const handleIncreasePrice = (pr) => {
@@ -51,11 +64,45 @@ const App = () => {
     );
     const selectionLimit = selectedPlayers.length > 5;
     if (isExist) {
-      alert(`${player.name} Already Selected`);
+      toast.warn(`${player.name} Already Selected`, {
+        position: "top-center",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
       return;
     }
     if (selectionLimit) {
-      alert("Sorry, Maximum Selection Reached!");
+      toast.warn("Sorry, Maximum Selection Reached!", {
+        position: "top-center",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+      return;
+    }
+    if (price < player.biddingPrice) {
+      toast.warn("Sorry, You Have Insufficient Credits", {
+        position: "top-center",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
       return;
     }
     handleIncreasePrice(player.biddingPrice);
@@ -84,16 +131,25 @@ const App = () => {
       {/* Cards */}
       <CardsContainer
         isActive={isActive}
+        setTabs={setTabs}
         handleIsActiveState={handleIsActiveState}
       ></CardsContainer>
-      <Cards addPlayerToSelected={addPlayerToSelected}></Cards>
-      {/* Selected Players */}
-      <Selected
-        handleDelete={handleDelete}
-        selectedPlayers={selectedPlayers}
-      ></Selected>
+
+      {tabs === "AvailablePlayer" ? (
+        <Cards addPlayerToSelected={addPlayerToSelected}></Cards>
+      ) : (
+        <Selected
+        handleIsActiveState={handleIsActiveState}
+          handleDelete={handleDelete}
+          setTabs={setTabs}
+          selectedPlayers={selectedPlayers}
+        ></Selected>
+      )}
+
+      {/* <Newsletter></Newsletter> */}
       {/* Footer */}
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

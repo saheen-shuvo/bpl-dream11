@@ -1,10 +1,14 @@
+import Newsletter from "./Newsletter";
+
 const Footer = () => {
   return (
-    <div className="h-[780px] bg-[#06091A] mt-32">
+    <div className="relative mt-12 lg:mt-52">
+      <Newsletter></Newsletter>
+          <div className="h-[728px] lg:h-[660px] bg-[#06091A] pt-10 lg:pt-48">
       <div className="flex justify-center">
         <img src="./images/logo-footer.png" alt="" />
       </div>
-      <footer className="flex justify-between bg-[#06091A] text-white p-10 px-2 lg:px-20">
+      <footer className="flex flex-col lg:flex-row gap-2 justify-between bg-[#06091A] text-white p-10 px-2 lg:px-20">
         <nav>
           <h6 className="footer-title">About Us</h6>
           <p>
@@ -13,7 +17,7 @@ const Footer = () => {
           </p>
         </nav>
         <nav>
-          <h6 className="footer-title ml-[-30px]">Quick Links</h6>
+          <h6 className="footer-title ml-0 lg:ml-[-30px]">Quick Links</h6>
           <ul className="list-disc text-white text-base">
             <li>
               <a className="link link-hover">Home</a>
@@ -41,7 +45,9 @@ const Footer = () => {
                 placeholder="Enter Your Email"
                 className="input input-bordered join-item"
               />
-              <button className="btn btn-primary join-item">Subscribe</button>
+              <button className="btn bg-green-900 text-white font-semibold join-item">
+                Subscribe
+              </button>
             </div>
           </fieldset>
         </form>
@@ -50,6 +56,7 @@ const Footer = () => {
       <p className="text-slate-400 text-center">
         @2024 Your Company All Rights Reserved.
       </p>
+    </div>
     </div>
   );
 };
