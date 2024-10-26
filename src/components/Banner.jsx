@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 const Banner = ({price, handleClaimCredits}) => {
     return (
         <div className='mx-2 lg:mx-20 mt-9 relative'>
-            <img className='w-full rounded-3xl bg-[#131313]' src="../../public/images/bg-shadow.png" alt="" />
+            <img className='w-full rounded-3xl bg-[#131313]' src="./images/bg-shadow.png" alt="" />
             <div className='absolute left-1/2 transform -translate-x-1/2 top-20'>
-            <img src="../../public/images/banner-main.png" alt="" />
+            <img src="./images/banner-main.png" alt="" />
             </div>
             <div className='absolute left-1/2 transform -translate-x-1/2 bottom-20 flex flex-col items-center w-full'>
             <h3 className='text-lg lg:text-4xl font-bold text-white'>Assemble Your Ultimate Dream 11 Cricket Team</h3>
@@ -14,4 +15,8 @@ const Banner = ({price, handleClaimCredits}) => {
     );
 };
 
+Banner.propTypes ={
+    price: PropTypes.func,
+    handleClaimCredits: PropTypes.func
+  }
 export default Banner;

@@ -34,7 +34,7 @@ const Cards = ({addPlayerToSelected}) => {
           </div>
           <div className="flex justify-between">
           <h3 className="font-medium">${player.biddingPrice}</h3>
-          <button onClick={() => addPlayerToSelected(player)} className="border-2 px-2 py-1 rounded-md text-sm font-semibold">Choose Player</button>
+          <button onClick={() => addPlayerToSelected(player)} className="border-2 border-green-900 hover:bg-slate-200 px-2 py-1 rounded-md text-sm font-semibold">Choose Player</button>
           </div>
         </div>
       </div>

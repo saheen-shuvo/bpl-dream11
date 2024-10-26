@@ -11,8 +11,8 @@ export default function CardsContainer({ handleIsActiveState, isActive }) {
             onClick={() => handleIsActiveState("card")}
             className={`${
               isActive.card
-                ? "rounded-l-lg border-l-2 border-y-2 border-yellow-400 bg-yellow-400 px-3 py-2"
-                : "rounded-l-lg border-l-2 border-y-2 border-yellow-400 px-3 py-2"
+                ? "rounded-l-lg border-l-2 border-y-2 border-green-900 bg-green-900 px-3 py-2 text-white font-semibold"
+                : "rounded-l-lg border-l-2 border-y-2 border-green-900 px-3 py-2"
             }`}
           >
             Available
@@ -21,8 +21,8 @@ export default function CardsContainer({ handleIsActiveState, isActive }) {
             onClick={() => handleIsActiveState("selected")}
             className={`${
               isActive.card
-                ? "rounded-r-lg border-r-2 border-y-2 border-yellow-400 px-3 py-2"
-                : "rounded-r-lg border-r-2 border-y-2 border-yellow-400 px-3 py-2 bg-yellow-400"
+                ? "rounded-r-lg border-r-2 border-y-2 border-green-900 px-3 py-2"
+                : "rounded-r-lg border-r-2 border-y-2 border-green-900 px-3 py-2 bg-green-900 text-white"
             }`}
           >
             Selected

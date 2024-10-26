@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <div className="h-[780px] bg-[#06091A] mt-32">
       <div className="flex justify-center">
-        <img src="../../public/images/logo-footer.png" alt="" />
+        <img src="./images/logo-footer.png" alt="" />
       </div>
       <footer className="flex justify-between bg-[#06091A] text-white p-10 px-2 lg:px-20">
         <nav>

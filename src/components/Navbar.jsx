@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 const Navbar = ({price}) => {
   return (
     <div className="flex justify-between items-center mt-2 lg:mt-6 mx-2 lg:mx-20">
@@ -19,7 +20,7 @@ const Navbar = ({price}) => {
           </svg>
           <img
             className="block md:hidden w-10"
-            src="../../public/images/logo.png"
+            src="./images/logo.png"
             alt=""
           />
         </div>
@@ -44,7 +45,7 @@ const Navbar = ({price}) => {
       <div className="">
         <img
           className="hidden lg:block w-14"
-          src="../../public/images/logo.png"
+          src="./images/logo.png"
           alt=""
         />
       </div>
@@ -63,11 +64,15 @@ const Navbar = ({price}) => {
             <a>Schedules</a>
           </li>
         </ul>
-        <a className="btn btn-sm lg:btn-md bg-transparent border-2 text-base">{price} Coin <img src="../../public/images/coin.png" alt="" />
+        <a className="btn btn-sm lg:btn-md bg-transparent border-2 text-base">{price} Coin <img src="./images/coin.png" alt="" />
         </a>
       </div>
     </div>
   );
 };
+
+Navbar.propTypes ={
+  price: PropTypes.func
+}
 
 export default Navbar;
